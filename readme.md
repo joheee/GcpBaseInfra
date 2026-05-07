@@ -8,3 +8,4 @@
 ### 08/05/2026
 - create remote state backend
 - compute network module
+- compute subnetwork module
