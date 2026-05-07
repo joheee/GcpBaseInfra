@@ -10,3 +10,7 @@ provider "google" {
   region = var.region
 }
 
+module "compute_network" {
+  source = "./modules/compute_network"
+  name = "base-infra-vpc"
+}

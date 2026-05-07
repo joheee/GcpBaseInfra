@@ -7,3 +7,4 @@
 - register free credit gcp account
 ### 08/05/2026
 - create remote state backend
+- compute network module
