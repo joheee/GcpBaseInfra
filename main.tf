@@ -50,3 +50,22 @@ module "compute_firewall_bastion" {
   protocol = "tcp"
   ports = ["22"]
 }
+
+module "container_cluster" {
+  source = "./modules/container_cluster"
+  name = "base-infra-cluster"
+  initial_node_count = 1
+  remove_default_node_pool = true
+  cn_id = module.compute_network.cn_id
+  scn_id = module.compute_subnetwork_cluster.scn_id
+  networking_mode = "VPC_NATIVE"
+  deletion_protection = false
+}
+
+module "container_node_pool" {
+  source = "./modules/container_node_pool"
+  name = "base-infra-node-pool"
+  cluster_id = module.container_cluster.cluster_id
+  node_count = 1
+  machine_type = "e2-micro"
+}
