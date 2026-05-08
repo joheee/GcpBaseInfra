@@ -9,3 +9,4 @@
 - create remote state backend
 - compute network module
 - compute subnetwork module 
+- compute instance module
