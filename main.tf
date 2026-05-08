@@ -40,3 +40,13 @@ module "compute_instance_bastion" {
   scn_id = module.compute_subnetwork_bastion.scn_id
   tags = ["bastion"]
 }
+
+module "compute_firewall_bastion" {
+  source = "./modules/compute_firewall"
+  name = "base-infra-bastion-fw"
+  cn_id = module.compute_network.cn_id
+  target_tags = ["bastion"]
+  source_ranges = ["0.0.0.0/0"]
+  protocol = "tcp"
+  ports = ["22"]
+}
