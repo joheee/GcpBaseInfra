@@ -16,4 +16,4 @@
 ### no credentials loaded (gcloud auth application-default login)
 - gcloud auth application-default login
 ### run terraform apply for more than 30 minutes and still not finished
-- 
+- specify the cluster location

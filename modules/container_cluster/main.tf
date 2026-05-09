@@ -1,4 +1,5 @@
 resource "google_container_cluster" "this" {
+    location = var.location
     name = var.name
     initial_node_count = var.initial_node_count
     remove_default_node_pool = var.remove_default_node_pool

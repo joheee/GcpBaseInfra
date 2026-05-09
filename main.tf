@@ -53,6 +53,7 @@ module "compute_firewall_bastion" {
 
 module "container_cluster" {
   source = "./modules/container_cluster"
+  location = "${var.region}-a"
   name = "base-infra-cluster"
   initial_node_count = 1
   remove_default_node_pool = true
