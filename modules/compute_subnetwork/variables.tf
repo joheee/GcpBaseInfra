@@ -1,9 +1,9 @@
 variable "name" {
-    type = string
+  type = string
 }
 variable "ip_cidr_range" {
-    type = string
+  type = string
 }
 variable "cn_id" {
-    type = string
+  type = string
 }

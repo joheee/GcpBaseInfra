@@ -1,24 +1,24 @@
 variable "name" {
-    type = string
+  type = string
 }
 variable "machine_type" {
-    type = string
+  type = string
 }
 variable "zone" {
-    type = string
+  type = string
 }
 variable "image" {
-    type = string
+  type = string
 }
 variable "cn_id" {
-    type = string
+  type = string
 }
 variable "scn_id" {
-    type = string
+  type = string
 }
 variable "oslogin" {
-    type = string
+  type = string
 }
 variable "tags" {
-    type = list(string)
+  type = list(string)
 }

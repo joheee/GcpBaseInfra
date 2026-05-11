@@ -1,25 +1,25 @@
 variable "location" {
-    type        = string
+  type = string
 }
 
 variable "name" {
-    type = string
+  type = string
 }
 variable "initial_node_count" {
-    type = number
+  type = number
 }
 variable "remove_default_node_pool" {
-    type = bool
+  type = bool
 }
 variable "cn_id" {
-    type = string
+  type = string
 }
 variable "scn_id" {
-    type = string
+  type = string
 }
 variable "networking_mode" {
-    type = string
+  type = string
 }
 variable "deletion_protection" {
-    type = bool
+  type = bool
 }

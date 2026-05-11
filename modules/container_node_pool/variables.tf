@@ -1,12 +1,12 @@
 variable "name" {
-    type = string
+  type = string
 }
 variable "cluster_id" {
-    type = string
+  type = string
 }
 variable "node_count" {
-    type = number
+  type = number
 }
 variable "machine_type" {
-    type = string
+  type = string
 }
