@@ -2,28 +2,16 @@
 
 Modular **Terraform** layout for core **Google Cloud** networking.
 
+# Design Architecture Diagram
+
+![The Project Architecture](images/architecture-diagram.png)
+
 ## What this demonstrates
 
 - **IaC** with reusable modules and remote state (GCS backend, lockfile).
 - **Networking**: Custom VPC (no default subnets), dedicated subnets for the cluster (`10.1.0.0/24`) and bastion (`10.1.1.0/24`).
 - **Compute**: Debian 13 bastion on `e2-micro` with network tags and a targeted SSH firewall rule.
 - **Kubernetes**: GKE cluster in a pinned zone (`${var.region}-a`), default node pool removed in favor of a custom `e2-micro` node pool.
-
-## Architecture (high level)
-
-```mermaid
-flowchart TB
-  subgraph vpc[Custom VPC]
-    sn_c[subnet 10.1.0.0/24]
-    sn_b[subnet 10.1.1.0/24]
-    fw[Firewall TCP/22]
-    bastion[Bastion VM]
-    gke[GKE cluster + node pool]
-  end
-  sn_c --> gke
-  sn_b --> bastion
-  fw --> bastion
-```
 
 ## Tech stack
 
