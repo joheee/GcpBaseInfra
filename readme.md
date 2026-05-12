@@ -29,7 +29,7 @@ flowchart TB
 
 | Area          | Choice                                   |
 | ------------- | ---------------------------------------- |
-| IaC           | Terraform                                |
+| IaC           | Terraform, GCP provider                  |
 | State         | GCS backend + lockfile                   |
 | Region        | Configurable (default `asia-southeast1`) |
 | Orchestration | Google Kubernetes Engine (GKE)           |
